@@ -24,9 +24,13 @@ download bilibili video
 修改qn值：
 
 "高清 1080P60"---116, 
+
 "高清 1080P"-----80,
+
 "高清 720P"------64,
+
 "清晰 480P"------32,
+
 "流畅 360P"------16
 
 ![20220114163054](https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20220114163054.png)
