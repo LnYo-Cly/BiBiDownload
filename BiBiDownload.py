@@ -16,7 +16,7 @@ def cookieLogin():
     url="http://api.bilibili.com/x/space/myinfo"
     headers={
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.55",
-        "cookie":"SESSDATA=b33dc30c%2C1653886628%2Cf1734*c1"
+        "cookie":"SESSDATA=更改此处"
     }
     
     res=session.get(url=url,headers=headers).text
@@ -35,7 +35,7 @@ def getVideDate(bv):
     url="https://api.bilibili.com/x/web-interface/view?bvid="+bv
     headers={
         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36 Edg/97.0.1072.55",
-        "cookie":"SESSDATA=b33dc30c%2C1653886628%2Cf1734*c1"
+        "cookie":"SESSDATA=更改此处"
     }
     viderJSON=json.loads(session.get(url=url,headers=headers).text)
     ico["video"]=viderJSON["data"]["pic"]
