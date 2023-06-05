@@ -12,7 +12,7 @@ videoInfos = []
 # 视频标题上是否添加P？ 比如p1,p2,p3。。。
 title_p = True
 
-cookie = "session数据添加到这里"
+cookie = "buvid3=A49942DB-EAB9-AFB1-210B-755ACEFB7EB623468infoc; b_nut=1676856923; i-wanna-go-back=-1; _uuid=8C3E2A53-E579-9369-8D67-DD794DD781CB20066infoc; buvid4=8715DE48-44D0-A576-8291-ACA539022FD424825-023022009-tCWJsLv7ShjcYRN9hp3Ypg%3D%3D; DedeUserID=304670947; DedeUserID__ckMd5=cc71dbedfcfeb12c; rpdid=|(u)~l~u~uuu0J'uY~Y)lYmmR; b_ut=5; header_theme_version=CLOSE; buvid_fp_plain=undefined; is-2022-channel=1; nostalgia_conf=-1; CURRENT_BLACKGAP=0; CURRENT_FNVAL=4048; CURRENT_PID=93d78e70-cfae-11ed-b0d1-b31627e523ef; FEED_LIVE_VERSION=V8; home_feed_column=5; CURRENT_QUALITY=80; fingerprint=310de723bb1ae1f56b09fb42a7d404da; buvid_fp=d47d4c6a5bccd99ae5715c78a93f9fff; browser_resolution=1536-714; share_source_origin=WEIXIN; bsource=share_source_weixinchat; SESSDATA=cfaed98e%2C1701492946%2Ce16a7%2A61; bili_jct=4b105fae6ceb95eb7fb650ae1ede9727; sid=70ehntbl; innersign=0; bp_video_offset_304670947=803613936146448400; b_lsid=E24610674_1888A3FD9D1; PVID=2"
 
 
 # cookie登录账号
@@ -128,10 +128,17 @@ if __name__ == "__main__":
     while (True):
         i = input("请输入功能菜单编号：")
         if i == '-1':
-            break;
+            break
         elif i == '0':
             showMenu()
         elif i == '1':
+            if len(videoInfos) > 0:
+                _op = input('当前系统内存有其他的视频，将会删除之前的视频，请确认是否继续？输入任意键继续，输入q退出')
+                if _op == 'q' or _op == 'Q':
+                    continue
+                else:
+                    print(f'清空内存数据')
+                    videoInfos.clear()
             bv = input("请输入BV号：")
             getVideDate(bv)
             printVideoDate()
