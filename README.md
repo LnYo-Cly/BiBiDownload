@@ -1,6 +1,13 @@
 # BiBiDownload
 download bilibili video
 
+
+## 修复日志
+- 2023-06-05
+  - cookies只需要再顶部添加一次
+  - 下载的文件名添加分P号，方便下载之后排序
+  - 修改下载地址，http地址已经不支持，改成https
+
 ## 更改cookie
 ![20220114162933](https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20220114162933.png)
 ![20220114162954](https://cdn.jsdelivr.net/gh/lnyo-cly/blogImg/pics/20220114162954.png)
